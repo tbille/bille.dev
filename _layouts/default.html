@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }}</title>
+
+    <meta name="description" content=""/>
+    <meta name="author" content="Thomas Bille" />
+    <meta name="copyright" content="&copy; {{ site.time | date: '%Y' }} Toto corp"/>
+    <link rel="alternate" href="https://bille.dev" hreflang="en-GB" />
+
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:site_name" content="{{ page.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@totostache" />
+    <meta property="twitter:creator" content="@totostache" />
+    <meta property="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+    <meta property="twitter:image" content="{{ site.url }}/assets/timer-logo.png"/>
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+
+    <style type="text/css" media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Courier New", monospace;
+        }
+        body {
+            background-color: #e6e3ea;
+            color: #8e999e;
+        }
+        a { color: inherit; } 
+        .page {
+            background-color: #2b3033;
+            margin: 10px auto;
+            width: max-content;
+            padding: 50px;
+        }
+        header {
+            padding-bottom: 20px;
+        }
+        .section {
+            padding-bottom: 20px;
+        }
+        h1::before {
+            content: "# ";
+            color: #c97072;
+        }
+
+        h2::before {
+            content: "## ";
+            color: #8f73bc
+        }
+
+        ul {
+            list-style-type: "-";
+        }
+        .link {
+            white-space:nowrap;
+            font-size: 0;
+        }
+        .linkTitle {
+            display: inline-block;
+            font-size: 16px;
+        }
+        .linkTitle::before {
+            content: "[";
+        }
+        .linkTitle::after {
+            content: "]";
+        }
+        .linkHref {
+            display: inline-block;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+        .linkHref::before {
+            content: "(";
+        }
+        .linkHref::after {
+            content: ")";
+        }
+        .linkAfterText {
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="page">
+        {{ content }}
+    </div>
+  </body>
+</html>
