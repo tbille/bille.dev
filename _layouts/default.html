@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
      <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ1EHPK2F0"></script>
@@ -36,76 +36,56 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
 
     <style type="text/css" media="screen">
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: "Courier New", monospace;
-        }
-        body {
-            background-color: #e6e3ea;
-            color: #8e999e;
-        }
-        a { color: inherit; } 
+      body {
+        margin: 10;
+        padding: 0;
+        font-family: "Courier New", monospace;
+        background-color: #ffffff;
+      }
+
+      @media only screen and (max-width: 767px) {
         .page {
-            background-color: #2b3033;
-            margin: 10px auto;
-            width: max-content;
-            padding: 50px;
-            margin-top: 200px;;
+          margin: 10px auto;
         }
-        header {
-            padding-bottom: 20px;
-        }
-        .section {
-            padding-bottom: 20px;
-        }
-        h1::before {
-            content: "# ";
-            color: #c97072;
-        }
+      }
 
-        h2::before {
-            content: "## ";
-            color: #8f73bc
+      @media only screen and (min-width: 767px) {
+        .page {
+          margin: 10px auto;
+          width: 800px;
+          padding: 50px;
+          margin-top: 100px;
         }
+      }
 
-        ul {
-            list-style-type: "-";
-        }
-        .link {
-            white-space:nowrap;
-            font-size: 0;
-        }
-        .linkTitle {
-            display: inline-block;
-            font-size: 16px;
-            color: #71909e;
-        }
-        .linkTitle::before {
-            content: "[";
-            color: #8e999e;
-        }
-        .linkTitle::after {
-            content: "]";
-            color: #8e999e;
-        }
-        .linkHref {
-            display: inline-block;
-            font-size: 16px;
-            text-decoration: underline;
-        }
-        .linkHref::before {
-            content: "(";
-        }
-        .linkHref::after {
-            content: ")";
-        }
+      header, section {
+        padding-bottom: 20px;
+      }
+
+      a[href^="http"]:not(.no-external)::after,
+      a[href^="https://"]:not(.no-external)::after
+      {
+        content: "";
+        width: 11px;
+        height: 11px;
+        margin-left: 4px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+      }
+
+      .logo {
+        width: 30px;
+        height: 30px;
+      }
     </style>
   </head>
   <body>
 
     <div class="page">
-        {{ content }}
+      {{ content }}
     </div>
   </body>
 </html>
