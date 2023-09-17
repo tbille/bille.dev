@@ -2,8 +2,14 @@ title: bille.dev
 email: toto@bille.dev
 baseurl: 
 url: "https://bille.dev"
-twitter_username: totostache
 github_username:  tbille
+
+collections:
+  posts:
+    permalink: /blog/:slug
 
 plugins:
   - jekyll-feed
+
+feed:
+  path: /blog/feed.atom

@@ -13,9 +13,12 @@ description: Engineering Manager at Canonical. Thomas Bille is passionate about 
   <p>I am passionate about open source, photography and coffee.</p>
 
   <p>
-    <a href="https://www.linkedin.com/in/tbille/" class="no-external" aria-label="See LinkedIn profile"><img src="assets/logo/linkedin.png" class="logo" alt="LinkedIn profile"></a>
-    <a href="https://github.com/tbille" class="no-external" aria-label="See GitHub profile"><img src="assets/logo/github.png" class="logo" alt="GitHub profile"></a>
-    <a href="https://instagram.com/totostache" class="no-external" aria-label="See Instagram profile"><img src="assets/logo/instagram.png" class="logo" alt="Instagram profile"></a>
+    <a href="https://www.linkedin.com/in/tbille/" class="no-external" aria-label="See LinkedIn profile"><img
+        src="assets/logo/linkedin.png" class="logo" alt="LinkedIn profile"></a>
+    <a href="https://github.com/tbille" class="no-external" aria-label="See GitHub profile"><img
+        src="assets/logo/github.png" class="logo" alt="GitHub profile"></a>
+    <a href="https://instagram.com/totostache" class="no-external" aria-label="See Instagram profile"><img
+        src="assets/logo/instagram.png" class="logo" alt="Instagram profile"></a>
   </p>
 </header>
 
@@ -23,27 +26,34 @@ description: Engineering Manager at Canonical. Thomas Bille is passionate about 
   <h2>Side projects</h2>
   <h3>Technology</h3>
   <ul>
-    <li><a href="https://roast-timer.com">Roast timer</a>: a free service to help home roasters to log their coffee roasts</li>
-    <li><a href="https://calendarexporter.com">Calendar Exporter</a>: a service to export your Google Calendar to an Excel spreadsheet. This was mostly an experiment to play with Paypal API and Google API</li>
-    <li><a href="https://open.spotify.com/show/03g4blg2HyxrZd9VlHPKNF?si=84b51b720a94440f&nd=1">Podcast ”418 I’m a Teapod”</a>: podcast project with <a href="https://lukewh.com/">Luke Wesley-Holley</a> to experiment with the Podcast technology</li>
+    <li><a href="https://roast-timer.com">Roast timer</a>: a free service to help home roasters to log their coffee
+      roasts</li>
+    <li><a href="https://calendarexporter.com">Calendar Exporter</a>: a service to export your Google Calendar to an
+      Excel spreadsheet. This was mostly an experiment to play with Paypal API and Google API</li>
+    <li><a href="https://open.spotify.com/show/03g4blg2HyxrZd9VlHPKNF?si=84b51b720a94440f&nd=1">Podcast ”418 I’m a
+        Teapod”</a>: podcast project with <a href="https://lukewh.com/">Luke Wesley-Holley</a> to experiment with the
+      Podcast technology</li>
     <li><a href="https://snapcraft.io/publisher/tbmb">snaps</a>: a few snaps I maintain</li>
   </ul>
 
   <h3>Photography</h3>
   <ul>
     <li><a href="/books/2022.pdf">2022</a>: book collecting shots that I took over the year</li>
-    <li><a href="/books/Autumn.pdf">Autumn</a>: poetry and photography book written with my partner Kelly Hutchinson</li>
+    <li><a href="/books/Autumn.pdf">Autumn</a>: poetry and photography book written with my partner Kelly Hutchinson
+    </li>
   </ul>
 </section>
 
 <section>
   <h2>Blog posts</h2>
+  <p>List of posts from <a href="/blog">my blog</a> and external blog contributions that I made.</p>
   <ul>
-    <li><a href="https://ubuntu.com/blog/3-step-guide-to-start-hacktoberfest">3 step guide to start Hacktoberfest</a></li>
-    <li><a href="https://ubuntu.com/blog/top-6-projects-from-our-hackathon">Top 6 projects from our Hackathon</a></li>
-    <li><a href="https://ubuntu.com/blog/meet-my-co-worker-webbot">Meet my co-worker, webbot</a></li>
-    <li><a href="https://ubuntu.com/blog/my-fosdem-2021">Open source, teamwork and mental health: my FOSDEM 2021</a></li>
-    <li><a href="https://ubuntu.com/blog/tutorials-for-everyone-from-everyone">Tutorials for everyone from everyone</a></li>
-    <li><a href="https://ubuntu.com/tutorials/guidelines">How to write an Ubuntu guide</a></li>
+    {% for post in site.posts %}
+    <li>
+      <a
+        href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url | relative_url }}{% endif %}">{{post.title}}</a>
+      - <i><time datetime="{{ post.date | date: '%F' }}">{{ post.date | date_to_long_string: "ordinal"}}</time></i>
+    </li>
+    {% endfor %}
   </ul>
 </section>
