@@ -51,11 +51,13 @@ description: Engineering Manager at Canonical. Thomas Bille is passionate about 
   <p>List of posts from <a href="/blog">my blog</a> and external blog contributions that I made.</p>
   <ul>
     {% for post in site.posts %}
+    {% if post.draft == false %}
     <li>
       <a
         href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url | relative_url }}{% endif %}">{{post.title}}</a>
       - <i><time datetime="{{ post.date | date: '%F' }}">{{ post.date | date_to_long_string: "ordinal"}}</time></i>
     </li>
+    {% endif %}
     {% endfor %}
   </ul>
 </section>
