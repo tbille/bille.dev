@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How I use social media
+title: How I limit social media?
 description: | 
   Describing how I managed to get rid of my addiction to social media without quitting it with incognito windows and virtual machines.
 ---
