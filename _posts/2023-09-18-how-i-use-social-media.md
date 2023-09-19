@@ -1,14 +1,13 @@
 ---
 layout: post
-title: How I use social medias
+title: How I use social media
 description: | 
   Describing how I managed to get rid of my addiction to social media without quitting it with incognito windows and virtual machines.
-draft: true
 ---
 
-A few years ago, when I was doom-scrolling on Twitter, I decided that I was done. I closed the tab. My first reflex then was to open a new tab and go on Twitter. This day, I realized that I was addicted to social media.
+A few years ago, when I was doom-scrolling on Twitter, I decided that I was done. I closed the tab. My first reflex then was to open a new tab and go on Twitter. This day, I realized that I was addicted to social media. It was time to act and change my way of consuming those.
 
-I thought I would share in this post the way I use social media to avoid falling into addiction.
+I thought I would share in this post the way I use social media today to avoid falling into addiction.
 
 ## Add but unfollow
 
@@ -32,7 +31,7 @@ Adding this layer of complexity made my brain really lazy to do those steps, whi
 
 ![Bluestacks logo](/assets/BlueStacks_Logo.png){: width="100" }
 
-I actually love sharing my photography work [on Instagram](https://www.instagram.com/totostache/). Instagram lets you post photos but not share them as stories in a browser. So I opted to use [BlueStacks](https://www.bluestacks.com/). It lets me create an Android virtual machine for one application directly on my desktop super easily. I installed the Instagram virtual machine and only use it to share my posts as stories.
+I actually love sharing my photography work [on Instagram](https://www.instagram.com/totostache/). Instagram lets you post photos but not share them as stories in a browser. So I opted to use [BlueStacks](https://www.bluestacks.com/), a service to run Android on Windows and Mac. It lets me create an Android virtual machine for one application directly on my desktop super easily. I installed the Instagram virtual machine and only use it to share my posts as stories.
 
 ## Last words
 
