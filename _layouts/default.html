@@ -36,7 +36,8 @@
     content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <meta property="twitter:image" content="https://bille.dev/assets/logo.png">
 
-  {% feed_meta %}
+  <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.atom">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
