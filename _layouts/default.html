@@ -36,6 +36,9 @@
     content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <meta property="twitter:image" content="https://bille.dev/assets/logo.png">
 
+  <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml">
+  <link rel="alternate" type="application/atom+xml" href="/blog/feed.atom">
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">

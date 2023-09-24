@@ -11,7 +11,7 @@ description: Micro-blog where I talk about recent discoveries, mostly around cof
 <hr>
 
 {% for post in site.posts %}
-{% if post.draft == false %}
+{% unless post.draft %}
 <h2>
     <a
         href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url | relative_url }}{% endif %}">{{post.title}}</a>
@@ -24,5 +24,5 @@ description: Micro-blog where I talk about recent discoveries, mostly around cof
 <p>{{ post.description }}</p>
 
 <hr>
-{% endif %}
+{% endunless %}
 {% endfor %}

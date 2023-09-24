@@ -1,4 +1,6 @@
-title: bille.dev
+title: bille.dev blog
+description: Micro-blog where I talk about recent discoveries, mostly around coffee, photography and technology.
+author: Thomas (toto) Bille
 email: toto@bille.dev
 baseurl: 
 url: "https://bille.dev"
@@ -9,8 +11,6 @@ collections:
     permalink: /blog/:slug
 
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
 
-feed:
-  path: /blog/feed.atom
+show_drafts: true
