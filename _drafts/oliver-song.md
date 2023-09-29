@@ -5,6 +5,8 @@ description: |
   The song we wrote for our child
 ---
 
+## Pourquoi tu pleure
+
 Pourquoi tu pleures mon Oliver\\
 Mon petit cœur\\
 Mon p'tit chanteur
@@ -18,3 +20,9 @@ Pourquoi tu ris\\
 Mon p'tit Oli\\
 T'as fait pipi\\
 Sur ton p'tit lit !
+
+## Au lit !
+
+En hivers\\
+Oliver\\
+va aller au lit vert.
