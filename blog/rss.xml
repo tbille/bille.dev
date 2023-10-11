@@ -14,9 +14,9 @@
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/blog/{{ page.path }}" rel="self" type="application/rss+xml" />
 		<lastBuildDate>{% for post in site.posts limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}</lastBuildDate>
-		{% assign feed_items = site.feed_items | default: 10 %}
-		{% for post in site.posts limit:feed_items %}
-        {% unless post.draft %}
+
+		{% assign posts = site.posts | where_exp: "post", "post.draft != true" %}
+		{% for post in posts limit:10 %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
 				{% if post.author.name %}
@@ -31,7 +31,6 @@
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
 			</item>
-        {% endunless %}
 		{% endfor %}
 	</channel>
 </rss>
