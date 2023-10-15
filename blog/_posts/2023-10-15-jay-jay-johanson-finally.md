@@ -14,7 +14,7 @@ The podcast has two formats:
 
 I was lucky to be the first guest on their Messaggio vocale series. The podcast is in Italian, so I thought I would share the notes that I took to prepare the episode in English.
 
-**INSERT EMBEDDED EPISODE**
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2wCtdiqEHVI7jUgvpJYBJm?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ## Jay Jay Johanson
 
